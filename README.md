@@ -1,4 +1,4 @@
-# summernote-lists
+# summernote-table-headers
 A [Summernote](http://summernote.org/) plugin that adds a button to the table popover allowing the user to toggle the first row as a table header.
 
 ### Usage
