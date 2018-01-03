@@ -50,7 +50,7 @@
                   // exists and user tries to add a new row below
                   // the header, Summernote actually adds another tr within the
                   // thead so need to capture all and move them into tbody
-                  self.observer.disconnect();
+                  self.observer.disconnect(); // see below
                   self.replaceTags($thead.find('th'), 'td')
                   var $theadRows = $thead.find('tr');
                   $table.prepend($theadRows);
@@ -65,20 +65,19 @@
                   $thead.append($topRow);
                   self.replaceTags($thead.find('td'), 'th')
 
-                  // Detect changes to the table dom so we can fix the headers
-                  // after rows or cols are added.
+                  // Detect changes to the table dom so we can fix the header
+                  // after rows or cols are added.  Summernote creates td's only
+
                   // https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver
 
                   // Options for the observer (which mutations to observe)
                   var config = { childList: true, subtree: true };
-
                   // Callback function to execute when mutations are observed
                   var callback = function(mutationsList) {
                     for(var mutation of mutationsList) {
                       self.replaceTags($(mutation.target).find('td'), 'th')
                     }
                   };
-
                   // Create an observer instance linked to the callback function
                   self.observer = new MutationObserver(callback);
                   // Start observing the target node for configured mutations
@@ -88,7 +87,8 @@
                     self.observer.disconnect();
                   };
 
-                }
+                } // else
+
                 context.invoke('afterCommand');
               }
             };
