@@ -3,7 +3,7 @@ A [Summernote](http://summernote.org/) plugin that adds a button to the table po
 
 ### Usage
 
-1. Include the js and css
+1. Include `summernote-table-headers.js`
 2. Customize the Summernote table popover to include `tableHeader`
 ````
 $(document).ready(function() {
