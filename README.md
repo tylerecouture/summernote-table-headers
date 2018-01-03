@@ -19,6 +19,6 @@ $(document).ready(function() {
 });
 ````
 
-### Example
+### Working Example
 
-See Example/example.html
+https://rawgit.com/tylerecouture/summernote-table-headers/master/Example/example.html
