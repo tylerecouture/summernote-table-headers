@@ -1,5 +1,5 @@
 # summernote-lists
-A [Summernote](http://summernote.org/) adds a button to the table popover to add a table heading when you click on the top table row.
+A [Summernote](http://summernote.org/) plugin that adds a button to the table popover allowing the user to toggle the first row as a table header.
 
 ### Usage
 
