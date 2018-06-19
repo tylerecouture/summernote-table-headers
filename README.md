@@ -9,7 +9,7 @@ When the summernote table popover is used to create a new column, summernote cre
 ### Usage
 
 1. Include `summernote-table-headers.js`
-2. Customize the Summernote table popover to include `tableHeader`
+2. Customize the Summernote table popover to include `tableHeaders`
 ````
 $(document).ready(function() {
   $('#summernote').summernote({
@@ -17,7 +17,7 @@ $(document).ready(function() {
       table: [
         ['add', ['addRowDown', 'addRowUp', 'addColLeft', 'addColRight']],
         ['delete', ['deleteRow', 'deleteCol', 'deleteTable']],
-        ['custom', ['tableHeader']]
+        ['custom', ['tableHeaders']]
       ],
     },
   });
