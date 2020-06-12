@@ -23,7 +23,6 @@
                 options = context.options,
                 $editor   = context.layoutInfo.editor,
                 $editable = context.layoutInfo.editable;
-                editable = $editable[0];
 
             context.memo('button.tableHeaders', function () {
                 return ui.buttonGroup([
@@ -50,7 +49,8 @@
                   // exists and user tries to add a new row below
                   // the header, Summernote actually adds another tr within the
                   // thead so need to capture all and move them into tbody
-                  self.observer.disconnect(); // see below
+                  if(self.observer)
+                     self.observer.disconnect(); // see below
                   self.replaceTags($thead.find('th'), 'td')
                   var $theadRows = $thead.find('tr');
                   $table.prepend($theadRows);
